@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Frontend Mentor | Pricing component with toggle</title>
+</head>
+<body>
+  <main class="wrap-all">
+
+    <form id="pricing-form" action="#">
+
+      <!-- Our Pricing -->
+      <h1 class="main-header">Our Pricing</h1>
+      <div class="period-switch-wrapper">
+        <p>Annually</p>
+        <label id="period-switch">
+          <input type="checkbox" value="" checked>
+          <span class="slider"></span>
+        </label>
+        <p>Monthly</p>
+      </div> 
+
+      <!-- Pricing Cards -->
+      <div class="cards-container">
+        <div id="basic" class="card">
+          <h2 class="card__header">Basic</h2>
+          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__storage"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__users"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__send"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <button class="card__btn">Learn More</button>
+        </div>
+        <div id="pro" class="card inverted-card">
+          <h2 class="card__header">Professional</h2>
+          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__storage"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__users"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__send"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <button class="card__btn">Learn More</button>
+        </div>
+        <div id="master" class="card">
+          <h2 class="card__header">Master</h2>
+          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__storage"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__users"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <p class="card__send"><!-- JavaScript --></p>
+          <hr class="card__horizontal-line">
+          <button class="card__btn">Learn More</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.github.com/FitforLife66">FitforLife66</a>.
+    </div>
+  </main>
+
+
+  <script src="./script.js"></script>
+  
+
+</body>
+</html>
