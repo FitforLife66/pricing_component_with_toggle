@@ -4,7 +4,7 @@ const cardsData = [
     {cardId: "master", priceMonth: "39.99", priceYear: "399.99", storage: "2 TB Storage", users: "10 Users Allowed", send: "Send up to 20 GB"}
 ];
 
-const cardsContainer = document.querySelector('.cards-container');
+const cardsContainer = document.querySelector('#cards-container');
 const periodSwitch = document.querySelector('#period-switch');
 
 // Init cards
@@ -17,11 +17,8 @@ for(let i = 0; i < cardsData.length; i++) {
 
 // Toggle monthly/yearly prices
 periodSwitch.addEventListener('change', () => {
-
     for(let i = 0; i < cardsData.length; i++) {
-
         cardsContainer.children[i].getElementsByClassName('card__price')[0].lastChild.remove(); 
-
         if(periodSwitch.children[0].checked) {    
             cardsContainer.children[i].getElementsByClassName('card__price')[0].append(cardsData[i].priceMonth);            
         } else { 
@@ -36,7 +33,7 @@ cardsContainer.addEventListener('click', (event) => {
     if(target.className === "card__btn") {
         let selectedCard = target.parentElement.id;
         console.log(`Learn more "${selectedCard} card" clicked`);
-        let cardIndex = pricing.map((e) => e.cardId).indexOf(selectedCard);
+        let cardIndex = cardsData.map((element) => element.cardId).indexOf(selectedCard);
         console.log(`The index of the clicked card is: ${cardIndex}`);
     } else {
         console.log('No button clicked');

@@ -1,7 +1,7 @@
 :root {
     --very-light-grayish-blue: #f7f7fe;
-    --light-grayish-blue: #b3b5c6;
-    --grayish-blue: #6e728e;
+    --grayish-blue: hsl(233, 13%, 49%);
+    --grayish-blue-opacity: hsla(233, 13%, 49%, 0.3);
     --dark-grayish-blue: #4a4d60;
     --light-blue: #6d72de;
     --gradient: linear-gradient(to bottom right, #a2a7f0, #696edd);
@@ -30,29 +30,28 @@ body::before {
     content: url(./img/bg-top.svg);
     position: absolute;
     top: -4rem;
-    right: calc((25vw - 275px));    /* y = 0.25x - 0.25*1100px */
+    right: calc((25vw - 27.5rem));    /* y = 0.25x - 0.25*1100px */
 }
 
-/* Form */
-#pricing-form {
+
+#wrap-all {
     margin: 0 auto;
     width: 32.7rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
- 
+    align-items: center; 
 }
 
 /* Our Pricing  */
 .main-header {
     margin-top: 6.4rem;
-    margin-bottom: 3rem;
-    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    font-size: 32px;
     color: var(--grayish-blue);
 }
 
 .period-switch-wrapper {
-    margin-bottom: 7rem;  
+    margin-bottom: 8rem;  
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -117,7 +116,7 @@ body::before {
 
 /* Pricing Cards */
 
-.cards-container {
+#cards-container {
     width: 100%;
     display: flex;    
     flex-direction: column;
@@ -126,7 +125,7 @@ body::before {
 }
 
 .card {
-    padding: 3rem;
+    padding: 4rem 3rem 3rem 3rem;
     border-radius: 1rem;
     width: 100%;
     background-color: white;
@@ -138,36 +137,36 @@ body::before {
 
 .card__header {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.card__price {
-    margin-bottom: 3rem;
+.card__features {
+    width: 100%;
+    list-style: none;
+}
+
+.card__feature {
+    width: 100%;
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
+    text-align: center;    
+    border-bottom: 0.1px solid var(--grayish-blue-opacity);    
+}
+
+.card__feature--price {
+    padding-bottom: 3.5rem;
     font-size: 7.2rem;
     letter-spacing: -0.02em;
     color: var(--dark-grayish-blue);
     display: flex;    
+    justify-content: center;
     align-items: center;
+    gap: 0.8rem; 
 }
 
-.card__price span {
+.card__feature--dollar-sign {
     font-size: 4rem;
-
     color: var(--dark-grayish-blue);
-}
-
-.space {
-    width: 0.5rem;
-}
-
-.card__horizontal-line{
-    width: 100%;
-    border-top: 0.1px solid var(--grayish-blue);
-    opacity: 0.3;
-}
-
-.card > * {
-    margin-bottom: 2rem;
 }
 
 .card__btn {
@@ -201,28 +200,32 @@ body::before {
 
 /* Inverted card */
 
-.inverted-card {
+.card--inverted {
     background: var(--gradient);
 }
 
-.inverted-card *,.inverted-card .card__price span {
+.card--inverted .card__feature {   
+    border-bottom: 0.1px solid hsla(255, 0%, 100%, 0.3);    
+}
+
+.card--inverted * {
     color: white;
 }
 
-.inverted-card .card__btn {
+.card--inverted .card__btn {
     color: var(--light-blue);
     background: none;
     background-color: white;
 }
 
-.inverted-card .card__btn:hover, .inverted-card .card__btn:focus-visible {
+.card--inverted .card__btn:hover, .inverted-card .card__btn:focus-visible {
     color: white;
     outline: 1px solid white;
     background: none;
     background-color: transparent;
 }
 
-.inverted-card .card__btn:focus-visible {
+.card--inverted .card__btn:focus-visible {
     color: white;
     outline: 2px solid black;
     background: none;
@@ -260,7 +263,7 @@ body::before {
         bottom: 0;
     }
 
-    #pricing-form {
+    #wrap-all {
         width: 105rem;
     }
 
@@ -268,11 +271,11 @@ body::before {
         width: 35rem;
     }
 
-    .cards-container {  
+    #cards-container {  
         flex-direction: row;
     }
 
-    .inverted-card {
+    .card--inverted {
         padding-top: 5rem;
         padding-bottom: 5rem;
         background: var(--gradient);

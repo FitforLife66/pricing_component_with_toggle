@@ -13,61 +13,54 @@
     <title>Frontend Mentor | Pricing component with toggle</title>
 </head>
 <body>
-  <main class="wrap-all">
+  <main id="wrap-all">
 
-    <form id="pricing-form" action="#">
+    <!-- Heading -->
+    <h1 class="main-header">Our Pricing</h1>
+    <div class="period-switch-wrapper">
+      <p>Annually</p>
+      <label id="period-switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <p>Monthly</p>
+    </div> 
 
-      <!-- Our Pricing -->
-      <h1 class="main-header">Our Pricing</h1>
-      <div class="period-switch-wrapper">
-        <p>Annually</p>
-        <label id="period-switch">
-          <input type="checkbox" value="" checked>
-          <span class="slider"></span>
-        </label>
-        <p>Monthly</p>
-      </div> 
-
-      <!-- Pricing Cards -->
-      <div class="cards-container">
-        <div id="basic" class="card">
-          <h2 class="card__header">Basic</h2>
-          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__storage"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__users"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__send"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <button class="card__btn">Learn More</button>
-        </div>
-        <div id="pro" class="card inverted-card">
-          <h2 class="card__header">Professional</h2>
-          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__storage"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__users"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__send"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <button class="card__btn">Learn More</button>
-        </div>
-        <div id="master" class="card">
-          <h2 class="card__header">Master</h2>
-          <p class="card__price"><span>&dollar;</span><span class="space"></span><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__storage"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__users"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <p class="card__send"><!-- JavaScript --></p>
-          <hr class="card__horizontal-line">
-          <button class="card__btn">Learn More</button>
-        </div>
+    <!-- Pricing Cards -->
+    <section id="cards-container">
+      <div id="basic" class="card">
+        <h2 class="card__header">Basic</h2>
+        <ul class="card__features">
+          <li class="card__feature card__feature--price card__price"><span class="card__feature--dollar-sign">&dollar;</span><!-- JavaScript --></li>
+          <li class="card__feature card__storage"><!-- JavaScript --></li>
+          <li class="card__feature card__users"><!-- JavaScript --></li>
+          <li class="card__feature card__send"><!-- JavaScript --></li>
+        </ul>          
+        <button class="card__btn">Learn More</button>
       </div>
-    </form>
+
+      <div id="pro" class="card card--inverted">
+        <h2 class="card__header">Professional</h2>
+        <ul class="card__features">
+          <li class="card__feature card__feature--price card__price"><span class="card__feature--dollar-sign">&dollar;</span><!-- JavaScript --></li>
+          <li class="card__feature card__storage"><!-- JavaScript --></li>
+          <li class="card__feature card__users"><!-- JavaScript --></li>
+          <li class="card__feature card__send"><!-- JavaScript --></li>
+        </ul>          
+        <button class="card__btn">Learn More</button>
+      </div>
+
+      <div id="master" class="card">
+        <h2 class="card__header">Master</h2>
+        <ul class="card__features">
+          <li class="card__feature card__feature--price card__price"><span class="card__feature--dollar-sign">&dollar;</span><!-- JavaScript --></li>
+          <li class="card__feature card__storage"><!-- JavaScript --></li>
+          <li class="card__feature card__users"><!-- JavaScript --></li>
+          <li class="card__feature card__send"><!-- JavaScript --></li>
+        </ul>          
+        <button class="card__btn">Learn More</button>
+      </div>
+    </section>  
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -75,9 +68,7 @@
     </div>
   </main>
 
-
   <script src="./script.js"></script>
-  
 
 </body>
 </html>
